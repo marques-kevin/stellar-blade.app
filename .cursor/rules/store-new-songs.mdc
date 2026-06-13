@@ -1,0 +1,52 @@
+---
+alwaysApply: true
+---
+
+# Storing YouTube-Downloaded Songs
+
+When a user downloads a song from YouTube using `yarn mp3`, follow these steps to properly store it in the database:
+
+## Step-by-Step Process
+
+### 1. Move and Rename the File
+
+- **Source**: Files are downloaded to `scripts/youtube-downloader/files/`
+- **Destination**: Move to `musics/` directory
+- **Naming Convention**: `{title-in-kebab-case}.mp3`
+  - Example: `Everglow_Stellar_Blade.mp3` → `everglow.mp3`
+  - Convert title to kebab-case (lowercase, hyphens instead of spaces)
+  - Use location prefixes when applicable (e.g., `eidos-7-clock-tower.mp3`)
+
+### 2. Regenerate Track Database
+
+Run the generation script to update albums and tracks:
+
+```bash
+yarn tsx scripts/generate-stellar-blade-tracks.ts
+```
+
+Or get duration manually:
+
+```bash
+./scripts/get-music-durations.sh "filename.mp3"
+```
+
+### 3. Determine Album
+
+Tracks belong to location-based albums defined in `src/database/albums.ts`:
+
+- **Location albums**: `eidos-7`, `xion`, `wasteland`, `great-desert`, etc.
+- **Thematic albums**: `boss-battles`, `vocal-collection`, `story-and-credits`
+
+Update album mapping rules in `scripts/generate-stellar-blade-tracks.ts` if a new track doesn't match existing patterns.
+
+### 4. Artist
+
+All tracks use `Artists["stellar-blade"]` from `src/database/artists.ts`.
+
+### 5. Verify
+
+- Check that `title_id` is unique across all tracks
+- Ensure file path matches actual file location in `musics/`
+- Verify duration is accurate
+- Run `yarn typecheck` after regeneration

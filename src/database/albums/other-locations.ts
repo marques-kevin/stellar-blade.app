@@ -1,0 +1,143 @@
+import { Track } from "@/types/track.type";
+import { Albums } from "../albums";
+import { Artists } from "../artists";
+
+export const OtherLocationsTracks: Track[] = [
+  {
+    title: "Buzzsaw Slide",
+    title_id: "buzzsaw-slide",
+    source: "/musics/buzzsaw-slide.mp3",
+    duration: 115,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Cargo Lift 121",
+    title_id: "cargo-lift-121",
+    source: "/musics/cargo-lift-121.mp3",
+    duration: 401,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Collapsed Rail Bridge",
+    title_id: "collapsed-rail-bridge",
+    source: "/musics/collapsed-rail-bridge.mp3",
+    duration: 585,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Collapsed Railway Bridge 2",
+    title_id: "collapsed-railway-bridge-2",
+    source: "/musics/collapsed-railway-bridge-2.mp3",
+    duration: 274,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Contaminated Water Purification Plant",
+    title_id: "contaminated-water-purification-plant",
+    source: "/musics/contaminated-water-purification-plant.mp3",
+    duration: 175,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Hall Of Records",
+    title_id: "hall-of-records",
+    source: "/musics/hall-of-records.mp3",
+    duration: 251,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Hypertube Ambient",
+    title_id: "hypertube-ambient",
+    source: "/musics/hypertube-ambient.mp3",
+    duration: 292,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Hypertube (Combat)",
+    title_id: "hypertube-combat",
+    source: "/musics/hypertube-combat.mp3",
+    duration: 292,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Hypertube (Instrumental)",
+    title_id: "hypertube-instrumental",
+    source: "/musics/hypertube-instrumental.mp3",
+    duration: 218,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Hypertube Slide",
+    title_id: "hypertube-slide",
+    source: "/musics/hypertube-slide.mp3",
+    duration: 209,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Karakuri",
+    title_id: "karakuri",
+    source: "/musics/karakuri.mp3",
+    duration: 316,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Laser Trap",
+    title_id: "laser-trap",
+    source: "/musics/laser-trap.mp3",
+    duration: 236,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Maintenance Sector (Combat)",
+    title_id: "maintenance-sector-combat",
+    source: "/musics/maintenance-sector-combat.mp3",
+    duration: 185,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Maintenance Sector",
+    title_id: "maintenance-sector",
+    source: "/musics/maintenance-sector.mp3",
+    duration: 360,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Memory Tower",
+    title_id: "memory-tower",
+    source: "/musics/memory-tower.mp3",
+    duration: 841,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Passenger Lift",
+    title_id: "passenger-lift",
+    source: "/musics/passenger-lift.mp3",
+    duration: 492,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Presence Chamber",
+    title_id: "presence-chamber",
+    source: "/musics/presence-chamber.mp3",
+    duration: 132,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Prestige Lounge (Combat)",
+    title_id: "prestige-lounge-combat",
+    source: "/musics/prestige-lounge-combat.mp3",
+    duration: 173,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Prestige Lounge",
+    title_id: "prestige-lounge",
+    source: "/musics/prestige-lounge.mp3",
+    duration: 170,
+    created_at: new Date("2024-04-26"),
+  }
+].map((track) => ({
+  ...track,
+  ...Artists["stellar-blade"],
+  ...Albums["other-locations"],
+}));

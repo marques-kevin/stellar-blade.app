@@ -1,0 +1,136 @@
+import { Track } from "@/types/track.type";
+import { Albums } from "../albums";
+import { Artists } from "../artists";
+
+export const XionTracks: Track[] = [
+  {
+    title: "Atelier",
+    title_id: "atelier",
+    source: "/musics/atelier.mp3",
+    duration: 562,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Blur (Instrumental)",
+    title_id: "blur-instrumental",
+    source: "/musics/blur-instrumental.mp3",
+    duration: 172,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Blur",
+    title_id: "blur",
+    source: "/musics/blur.mp3",
+    duration: 171,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Dawn Holidays",
+    title_id: "dawn-holidays",
+    source: "/musics/dawn-holidays.mp3",
+    duration: 200,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Dawn Winter",
+    title_id: "dawn-winter",
+    source: "/musics/dawn-winter.mp3",
+    duration: 204,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Enya's Song - Bar Music",
+    title_id: "enya-s-song-bar-music",
+    source: "/musics/enya-s-song-bar-music.mp3",
+    duration: 406,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Gwen Hair Salon",
+    title_id: "gwen-hair-salon",
+    source: "/musics/gwen-hair-salon.mp3",
+    duration: 145,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Just Fine (Instrumental)",
+    title_id: "just-fine-instrumental",
+    source: "/musics/just-fine-instrumental.mp3",
+    duration: 193,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Just Fine",
+    title_id: "just-fine",
+    source: "/musics/just-fine.mp3",
+    duration: 187,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Lullaby Of Secret (Instrumental)",
+    title_id: "lullaby-of-secret-instrumental",
+    source: "/musics/lullaby-of-secret-instrumental.mp3",
+    duration: 161,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Lullaby Of Secret",
+    title_id: "lullaby-of-secret",
+    source: "/musics/lullaby-of-secret.mp3",
+    duration: 156,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Oasis Summer",
+    title_id: "oasis-summer",
+    source: "/musics/oasis-summer.mp3",
+    duration: 153,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Oasis",
+    title_id: "oasis",
+    source: "/musics/oasis.mp3",
+    duration: 189,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Take Me Away (Instrumental)",
+    title_id: "take-me-away-instrumental",
+    source: "/musics/take-me-away-instrumental.mp3",
+    duration: 234,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Take Me Away",
+    title_id: "take-me-away",
+    source: "/musics/take-me-away.mp3",
+    duration: 233,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Xion 1",
+    title_id: "xion-1",
+    source: "/musics/xion-1.mp3",
+    duration: 207,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Xion 2",
+    title_id: "xion-2",
+    source: "/musics/xion-2.mp3",
+    duration: 1743,
+    created_at: new Date("2024-04-26"),
+  },
+  {
+    title: "Xion 3",
+    title_id: "xion-3",
+    source: "/musics/xion-3.mp3",
+    duration: 306,
+    created_at: new Date("2024-04-26"),
+  }
+].map((track) => ({
+  ...track,
+  ...Artists["stellar-blade"],
+  ...Albums["xion"],
+}));
